@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastembed-cloud"
+version = "0.1.0"
+description = "Cloud embeddings via AINative API — drop-in fastembed replacement, no model downloads"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "AINative Studio", email = "support@ainative.studio"},
+]
+keywords = [
+    "fastembed",
+    "fastembed-alternative",
+    "embeddings",
+    "text-embeddings",
+    "cloud-embeddings",
+    "free-embeddings",
+    "ainative",
+    "zerodb",
+    "bge",
+    "baai",
+    "onnx-alternative",
+    "vector-embeddings",
+    "semantic-search",
+    "similarity-search",
+    "sentence-transformers-alternative",
+    "auto-provisioning",
+    "serverless",
+    "no-download",
+    "claude",
+    "cursor",
+    "windsurf",
+    "rag",
+    "retrieval-augmented-generation",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+local = ["fastembed>=0.3.0"]
+numpy = ["numpy>=1.20"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "responses>=0.23",
+]
+
+[project.urls]
+Homepage = "https://github.com/AINative-Studio/fastembed-cloud"
+Documentation = "https://docs.ainative.studio/embeddings"
+Repository = "https://github.com/AINative-Studio/fastembed-cloud"
+Issues = "https://github.com/AINative-Studio/fastembed-cloud/issues"
+
+[tool.setuptools.packages.find]
+include = ["fastembed_cloud*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
